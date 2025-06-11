@@ -251,7 +251,7 @@ VITE_APP_VERSION=1.0.0
 
 ### API Documentation
 
-- **Users API Swagger**: `http://localhost:3000/api`, See [Users API README] (https://github.com/drirodri/users-api)
+- **Users API Swagger**: `http://localhost:3000/api`, See [Users API README](https://github.com/drirodri/users-api)
 - **Posts API Documentation**: See [Posts API README](https://github.com/drirodri/posts-api/blob/master/README.md)
 
 ### Development Resources
