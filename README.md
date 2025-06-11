@@ -7,8 +7,8 @@ A modern React frontend application for the Dri Posts platform, built with TypeS
 This frontend is part of a microservices architecture:
 
 - **Frontend** (React + TypeScript + Vite) - This application
-- **[Users API](../users-api)** (NestJS) - Authentication & user management
-- **[Posts API](../posts-api)** (Go) - Posts management & operations
+- **[Users API](https://github.com/drirodri/users-api)** (NestJS) - Authentication & user management
+- **[Posts API](https://github.com/drirodri/posts-api)** (Go) - Posts management & operations
 
 ## 🚀 Features
 
@@ -64,8 +64,8 @@ This frontend is part of a microservices architecture:
 
 - Node.js 18+
 - npm or yarn package manager
-- Running [Users API](../users-api) (for authentication)
-- Running [Posts API](../posts-api) (for posts data)
+- Running [Users API](https://github.com/drirodri/users-api) (for authentication)
+- Running [Posts API](https://github.com/drirodri/posts-api) (for posts data)
 
 ### Installation
 
@@ -251,8 +251,8 @@ VITE_APP_VERSION=1.0.0
 
 ### API Documentation
 
-- **Users API Swagger**: `http://localhost:3000/api`
-- **Posts API Documentation**: See [Posts API README](../posts-api/README.md)
+- **Users API Swagger**: `http://localhost:3000/api`, See [Users API README] (https://github.com/drirodri/users-api)
+- **Posts API Documentation**: See [Posts API README](https://github.com/drirodri/posts-api/blob/master/README.md)
 
 ### Development Resources
 
