@@ -1,12 +1,14 @@
 import { http, HttpResponse } from "msw";
+import { CreateUserInput, LoginInput } from "../../lib/validations/authSchema";
 
 // Use the same API URL configuration as the actual app
-const USERS_API_URL = import.meta.env.VITE_USERS_API_URL || "http://localhost:3000";
+const USERS_API_URL =
+  import.meta.env.VITE_USERS_API_URL || "http://localhost:3000";
 
 export const handlers = [
   // Register endpoint
   http.post(`${USERS_API_URL}/register`, async ({ request }) => {
-    const body = (await request.json()) as any;
+    const body = (await request.json()) as CreateUserInput;
 
     if (!body.email || !body.password || !body.name) {
       return HttpResponse.json(
@@ -34,7 +36,7 @@ export const handlers = [
 
   // Login endpoint
   http.post(`${USERS_API_URL}/auth/login`, async ({ request }) => {
-    const body = (await request.json()) as any;
+    const body = (await request.json()) as LoginInput;
 
     if (!body.email || !body.password) {
       return HttpResponse.json(

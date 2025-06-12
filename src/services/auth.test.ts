@@ -127,7 +127,9 @@ describe("AuthService", () => {
           role: expect.any(String),
         }),
       });
-    });    it("should handle unauthorized access when getting current user", async () => {
+    });
+
+    it("should handle unauthorized access when getting current user", async () => {
       // Mock the MSW handler to return unauthorized for no token
       const { server } = await import("../test/mocks/server");
       const { http, HttpResponse } = await import("msw");
