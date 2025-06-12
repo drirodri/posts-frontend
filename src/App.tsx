@@ -1,6 +1,10 @@
+import AtomsTestPage from "./pages/AtomsTestPage";
+
 function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background"></div>
+    <div className="min-h-screen bg-background">
+      <AtomsTestPage />
+    </div>
   );
 }
 
