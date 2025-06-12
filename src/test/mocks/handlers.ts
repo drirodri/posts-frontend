@@ -1,6 +1,7 @@
 import { http, HttpResponse } from "msw";
 
-const USERS_API_URL = "http://localhost:3333";
+// Use the same API URL configuration as the actual app
+const USERS_API_URL = import.meta.env.VITE_USERS_API_URL || "http://localhost:3000";
 
 export const handlers = [
   // Register endpoint

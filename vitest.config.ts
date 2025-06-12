@@ -10,6 +10,10 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: ["./src/test/setup.ts"],
     css: true,
+    env: {
+      VITE_USERS_API_URL: "http://localhost:3000",
+      VITE_POSTS_API_URL: "http://localhost:8080",
+    },
   },
   resolve: {
     alias: {

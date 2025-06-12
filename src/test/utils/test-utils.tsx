@@ -122,7 +122,7 @@ export const testRegistrationData = {
 };
 
 // Helper functions for tests
-export const waitForAuthState = async (isAuthenticated: boolean) => {
+export const waitForAuthState = async () => {
   // Helper to wait for auth state changes
   await new Promise((resolve) => setTimeout(resolve, 100));
 };
@@ -146,6 +146,15 @@ export const createMockLocalStorage = () => {
   };
 };
 
-// Re-export everything from testing-library
-export * from "@testing-library/react";
+// Re-export specific testing utilities (avoiding react-refresh/only-export-components rule)
+export {
+  screen,
+  fireEvent,
+  waitFor,
+  act,
+  cleanup,
+  renderHook,
+  waitForElementToBeRemoved,
+} from "@testing-library/react";
+export { default as userEvent } from "@testing-library/user-event";
 export { customRender as render };
