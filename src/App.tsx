@@ -1,10 +1,19 @@
-import AtomsTestPage from "./pages/AtomsTestPage";
+import { Box } from "@mui/material";
+import { LoginForm } from "./components";
 
 function App() {
   return (
-    <div className="min-h-screen bg-background">
-      <AtomsTestPage />
-    </div>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+        backgroundColor: "#f5f5f5",
+      }}
+    >
+      <LoginForm />
+    </Box>
   );
 }
 
