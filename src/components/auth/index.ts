@@ -7,11 +7,14 @@
 
 // Auth Forms
 export { default as LoginForm } from "./LoginForm"; // ✅ Implementado com AuthContext integrado
-// export { default as RegisterForm } from './RegisterForm';
+export { default as RegisterForm } from "./RegisterForm"; // ✅ Implementado com AuthContext integrado
 // export { default as ForgotPasswordForm } from './ForgotPasswordForm';
 // export { default as ResetPasswordForm } from './ResetPasswordForm';
 
 // Auth UI
+export { default as AuthContainer } from "./AuthContainer"; // ✅ Container base para páginas de auth
+export { default as PasswordStrengthIndicator } from "./PasswordStrengthIndicator"; // ✅ Indicador de força da senha
+// export { default as AuthCard } from './AuthCard';
 // export { default as AuthCard } from './AuthCard';
 // export { default as AuthLayout } from './AuthLayout';
 // export { default as SocialLoginButtons } from './SocialLoginButtons';
