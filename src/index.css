@@ -1,58 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap");
+/* Import Google Fonts - keep for Material UI usage */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap");
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";
 
-@import "tailwindcss";
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
-@import "tw-animate-css";
-
-:root {
-  /* Color Palette */
-  --ghost-white: #e8e9f3;
-  --silver: #cecece;
-  --french-gray: #a6a6a8;
-  --raisin-black: #272635;
-  --non-photo-blue: #b1e5f2;
-
-  /* HSL Values */
-  --ghost-white-hsl: 235, 31%, 93%;
-  --silver-hsl: 0, 0%, 81%;
-  --french-gray-hsl: 240, 1%, 65%;
-  --raisin-black-hsl: 244, 16%, 18%;
-  --non-photo-blue-hsl: 192, 71%, 82%;
-
-  /* Theme Colors */
-  --color-primary: var(--non-photo-blue);
-  --color-secondary: var(--ghost-white);
-  --color-neutral: var(--french-gray);
-  --color-background: var(--ghost-white);
-  --color-surface: #ffffff;
-  --color-text: var(--raisin-black);
-  --color-text-secondary: var(--french-gray);
-
-  /* Font families */
-  --font-sans: "Roboto", system-ui, sans-serif;
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-mono: "Fira Code", Monaco, monospace;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+/* Basic reset - Material UI will handle most styling */
 body {
   margin: 0;
-  font-family: var(--font-sans);
-  background-color: var(--color-background);
-  color: var(--color-text);
+  font-family: "Roboto", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Code elements styling for Material UI */
 code {
-  font-family: var(--font-mono);
+  font-family: "Fira Code", Monaco, monospace;
 }
