@@ -58,4 +58,16 @@ export const darkPalette: PaletteOptions = {
     primary: "#ffffff",
     secondary: "#b0b0b0",
   },
+  error: {
+    main: "#f44336",
+  },
+  warning: {
+    main: "#ff9800",
+  },
+  info: {
+    main: "#2196f3",
+  },
+  success: {
+    main: "#4caf50",
+  },
 };
