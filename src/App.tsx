@@ -3,6 +3,7 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import { theme } from "./theme";
 import { AuthProvider } from "./hooks/auth";
 import LoginPage from "./pages/auth/LoginPage";
+import RegisterPage from "./pages/auth/RegisterPage";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 function App() {
@@ -12,20 +13,9 @@ function App() {
       <AuthProvider>
         <Routes>
           {/* Rotas públicas */}
-          <Route path="/login" element={<LoginPage />} />
-
-          {/* Página de registro (placeholder) */}
-          <Route
-            path="/register"
-            element={
-              <div style={{ padding: "20px", textAlign: "center" }}>
-                <h1>Criar Conta (Em desenvolvimento)</h1>
-                <p>Página de registro será implementada em breve.</p>
-                <a href="/login">Voltar para o login</a>
-              </div>
-            }
-          />
-
+          <Route path="/login" element={<LoginPage />} />{" "}
+          {/* Página de registro */}
+          <Route path="/register" element={<RegisterPage />} />
           {/* Página de recuperação de senha (placeholder) */}
           <Route
             path="/forgot-password"
@@ -39,7 +29,6 @@ function App() {
               </div>
             }
           />
-
           {/* Rotas protegidas */}
           <Route
             path="/dashboard"
@@ -52,10 +41,8 @@ function App() {
               </ProtectedRoute>
             }
           />
-
           {/* Rota padrão */}
           <Route path="/" element={<Navigate to="/login" replace />} />
-
           {/* 404 */}
           <Route
             path="*"
