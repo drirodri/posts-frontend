@@ -4,3 +4,55 @@
 @import "tailwindcss/preflight";
 @import "tailwindcss/utilities";
 @import "tw-animate-css";
+
+:root {
+  /* Color Palette */
+  --ghost-white: #e8e9f3;
+  --silver: #cecece;
+  --french-gray: #a6a6a8;
+  --raisin-black: #272635;
+  --non-photo-blue: #b1e5f2;
+
+  /* HSL Values */
+  --ghost-white-hsl: 235, 31%, 93%;
+  --silver-hsl: 0, 0%, 81%;
+  --french-gray-hsl: 240, 1%, 65%;
+  --raisin-black-hsl: 244, 16%, 18%;
+  --non-photo-blue-hsl: 192, 71%, 82%;
+
+  /* Theme Colors */
+  --color-primary: var(--non-photo-blue);
+  --color-secondary: var(--ghost-white);
+  --color-neutral: var(--french-gray);
+  --color-background: var(--ghost-white);
+  --color-surface: #ffffff;
+  --color-text: var(--raisin-black);
+  --color-text-secondary: var(--french-gray);
+
+  /* Font families */
+  --font-sans: "Roboto", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "Fira Code", Monaco, monospace;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: var(--font-mono);
+}
