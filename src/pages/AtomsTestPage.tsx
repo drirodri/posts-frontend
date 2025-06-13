@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Input, Text, Label, Icon, Avatar } from "../components/atoms";
 import { baseTheme } from "@/lib/theme";
+import { Search, Mail } from "lucide-react";
 
 const AtomsTestPage: React.FC = () => {
   return (
@@ -32,83 +33,46 @@ const AtomsTestPage: React.FC = () => {
             marginTop: "1rem",
           }}
         >
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+            <Button variant="primary">Primary Button</Button>
+            <Button variant="secondary">Secondary Button</Button>
+            <Button variant="danger">Danger Button</Button>
+            <Button variant="ghost">Ghost Button</Button>
+            <Button variant="outline">Outline Button</Button>
+          </div>
+
+          {/* Diferentes tamanhos */}
           <div
             style={{
-              padding: "0.5rem",
-              border: "2px dashed #ccc",
-              borderRadius: "4px",
+              display: "flex",
+              gap: "1rem",
+              alignItems: "center",
+              flexWrap: "wrap",
             }}
           >
-            <Button> teste </Button>
-            <span
-              style={{
-                marginLeft: "0.5rem",
-                fontSize: "0.875rem",
-                color: "#666",
-              }}
-            >
-              Primary Button
-            </span>
+            <Button size="xs">Extra Small</Button>
+            <Button size="sm">Small</Button>
+            <Button size="md">Medium</Button>
+            <Button size="lg">Large</Button>
+            <Button size="xl">Extra Large</Button>
           </div>
-          <div
-            style={{
-              padding: "0.5rem",
-              border: "2px dashed #ccc",
-              borderRadius: "4px",
-            }}
-          >
-            <Button />
-            <span
-              style={{
-                marginLeft: "0.5rem",
-                fontSize: "0.875rem",
-                color: "#666",
-              }}
-            >
-              Secondary Button
-            </span>
+
+          {/* Estados especiais */}
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+            <Button disabled>Disabled</Button>
+            <Button loading>Loading...</Button>
+            <Button fullWidth>Full Width Button</Button>
           </div>
-          <div
-            style={{
-              padding: "0.5rem",
-              border: "2px dashed #ccc",
-              borderRadius: "4px",
-            }}
-          >
-            <Button />
-            <span
-              style={{
-                marginLeft: "0.5rem",
-                fontSize: "0.875rem",
-                color: "#666",
-              }}
-            >
-              Danger Button
-            </span>
+
+          {/* Com ícones */}
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+            <Button leftIcon="🚀">With Left Icon</Button>
+            <Button rightIcon="→">With Right Icon</Button>
+            <Button leftIcon="💾" rightIcon="✓">
+              Both Icons
+            </Button>
           </div>
-          <div
-            style={{
-              padding: "0.5rem",
-              border: "2px dashed #ccc",
-              borderRadius: "4px",
-            }}
-          >
-            <Button />
-            <span
-              style={{
-                marginLeft: "0.5rem",
-                fontSize: "0.875rem",
-                color: "#666",
-              }}
-            >
-              Disabled Button
-            </span>
-          </div>
-        </div>
-        <p style={{ marginTop: "1rem", fontSize: "0.875rem", color: "#666" }}>
-          TODO: Implement with props: variant, size, disabled, onClick, type,
-          children
-        </p>
+        </div>{" "}
       </section>{" "}
       {/* Input Tests */}
       <section
@@ -124,87 +88,108 @@ const AtomsTestPage: React.FC = () => {
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "1rem",
+            gap: "1.5rem",
             marginTop: "1rem",
           }}
         >
-          <div
-            style={{
-              padding: "0.5rem",
-              border: "2px dashed #ccc",
-              borderRadius: "4px",
-            }}
-          >
-            <Input />
-            <span
-              style={{
-                marginLeft: "0.5rem",
-                fontSize: "0.875rem",
-                color: "#666",
-              }}
+          {/* Basic inputs */}
+          <div>
+            <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem" }}>
+              Basic Inputs
+            </h3>
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
             >
-              Text input
-            </span>
+              <Input
+                label="Nome"
+                placeholder="Digite seu nome"
+                helperText="Nome completo"
+              />
+              <Input
+                type="email"
+                label="Email"
+                placeholder="seu@email.com"
+                required
+              />
+              <Input
+                type="password"
+                label="Senha"
+                placeholder="Digite sua senha"
+                helperText="Mínimo 8 caracteres"
+              />
+            </div>
           </div>
-          <div
-            style={{
-              padding: "0.5rem",
-              border: "2px dashed #ccc",
-              borderRadius: "4px",
-            }}
-          >
-            <Input />
-            <span
-              style={{
-                marginLeft: "0.5rem",
-                fontSize: "0.875rem",
-                color: "#666",
-              }}
+          {/* Sizes */}
+          <div>
+            <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem" }}>
+              Tamanhos
+            </h3>
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
             >
-              Email input
-            </span>
+              <Input size="sm" placeholder="Input pequeno" label="Pequeno" />
+              <Input
+                size="md"
+                placeholder="Input médio"
+                label="Médio (padrão)"
+              />
+              <Input size="lg" placeholder="Input grande" label="Grande" />
+            </div>
           </div>
-          <div
-            style={{
-              padding: "0.5rem",
-              border: "2px dashed #ccc",
-              borderRadius: "4px",
-            }}
-          >
-            <Input />
-            <span
-              style={{
-                marginLeft: "0.5rem",
-                fontSize: "0.875rem",
-                color: "#666",
-              }}
+          {/* States */}
+          <div>
+            <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem" }}>
+              Estados
+            </h3>
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
             >
-              Password input
-            </span>
-          </div>
-          <div
-            style={{
-              padding: "0.5rem",
-              border: "2px dashed #ccc",
-              borderRadius: "4px",
-            }}
-          >
-            <Input />
-            <span
-              style={{
-                marginLeft: "0.5rem",
-                fontSize: "0.875rem",
-                color: "#666",
-              }}
+              <Input
+                variant="default"
+                placeholder="Estado padrão"
+                label="Padrão"
+              />
+              <Input
+                variant="success"
+                placeholder="Estado de sucesso"
+                label="Sucesso"
+                helperText="Campo válido!"
+              />
+              <Input
+                variant="error"
+                placeholder="Estado de erro"
+                label="Erro"
+                error="Este campo é obrigatório"
+              />
+              <Input
+                placeholder="Campo desabilitado"
+                label="Desabilitado"
+                disabled
+              />
+            </div>
+          </div>{" "}
+          {/* With icons */}
+          <div>
+            <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem" }}>
+              Com Ícones
+            </h3>
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
             >
-              Disabled input
-            </span>
+              <Input
+                placeholder="Buscar..."
+                label="Busca"
+                leftIcon={<Search size={18} />}
+              />
+              <Input
+                type="email"
+                placeholder="seu@email.com"
+                label="Email"
+                leftIcon={<Mail size={18} />}
+              />
+            </div>
           </div>
         </div>
-        <p style={{ marginTop: "1rem", fontSize: "0.875rem", color: "#666" }}>
-          TODO: Implement with props: type, placeholder, value, onChange, error,
-          disabled
-        </p>
       </section>
       {/* Text Tests */}
       <section
@@ -701,16 +686,10 @@ const AtomsTestPage: React.FC = () => {
                     flex: 1,
                   }}
                 >
-                  <Input />
-                  <span
-                    style={{
-                      marginLeft: "0.5rem",
-                      fontSize: "0.75rem",
-                      color: "#666",
-                    }}
-                  >
-                    Type to search...
-                  </span>
+                  <Input
+                    placeholder="Type to search..."
+                    leftIcon={<Search size={18} />}
+                  />
                 </div>
                 <div
                   style={{
@@ -720,16 +699,7 @@ const AtomsTestPage: React.FC = () => {
                   }}
                 >
                   <Icon />
-                  <Button />
-                  <span
-                    style={{
-                      marginLeft: "0.5rem",
-                      fontSize: "0.75rem",
-                      color: "#666",
-                    }}
-                  >
-                    Search
-                  </span>
+                  <Button variant="primary">Search</Button>
                 </div>
               </div>
             </div>
