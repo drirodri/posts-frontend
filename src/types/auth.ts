@@ -11,8 +11,8 @@ export interface User {
   name: string;
   email: string;
   role: UserType; // Added role field
-  createdAt: string;
-  updatedAt: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export interface createUserDTO {
@@ -50,6 +50,7 @@ export interface LoginResponse {
 export interface MeResponse {
   userId: number; // Changed from string to number for consistency
   email: string;
+  name: string;
   role: UserType;
 }
 

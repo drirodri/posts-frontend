@@ -39,9 +39,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
           id: userInfo.userId,
           email: userInfo.email,
           role: userInfo.role,
-          name: "", // Will be filled when we get full user data
-          createdAt: "",
-          updatedAt: "",
+          name: userInfo.name,
         };
 
         setUser(userData);
@@ -75,9 +73,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         id: userInfo.userId,
         email: userInfo.email,
         role: userInfo.role,
-        name: "", // Will be filled when we get full user data
-        createdAt: "",
-        updatedAt: "",
+        name: userInfo.name,
       };
 
       setUser(userData);
