@@ -82,7 +82,7 @@ const AppBar: React.FC<AppBarProps> = ({ onMenuClick, drawerWidth }) => {
             fontSize: { xs: "1rem", sm: "1.25rem" },
           }}
         >
-          Dri Posts
+          Dritter
         </Typography>{" "}
         <Box
           sx={{

@@ -121,7 +121,7 @@ const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
             D
           </Box>
           <Typography variant="h6" noWrap>
-            Dri Posts
+            Dritter
           </Typography>
         </Box>
       </Toolbar>
