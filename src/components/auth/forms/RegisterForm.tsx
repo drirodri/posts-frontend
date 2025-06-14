@@ -124,8 +124,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSuccess, onLogin }) => {
           </Box>
         </Box>
       )}
-
-      <Box sx={{ textAlign: "center", mb: 3 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <PersonAdd sx={{ fontSize: 48, color: "primary.main", mb: 1 }} />
         <Typography variant="h4" component="h1" gutterBottom>
           Criar Conta
@@ -133,20 +132,18 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSuccess, onLogin }) => {
         <Typography variant="body2" color="text.secondary">
           Crie sua conta para começar
         </Typography>
-      </Box>
-
-      {/* Container com altura fixa para o erro */}
-      <Box
-        sx={{
-          height: 56, // Altura fixa para acomodar o Alert
-          mb: 2,
-          display: "flex",
-          alignItems: "flex-start",
-        }}
-      >
-        <Fade in={!!error} timeout={300}>
-          <Box sx={{ width: "100%" }}>
-            {error && (
+      </Box>{" "}
+      {/* Container para o erro - só renderiza quando há erro */}
+      {error && (
+        <Box
+          sx={{
+            mb: 2,
+            display: "flex",
+            alignItems: "flex-start",
+          }}
+        >
+          <Fade in={!!error} timeout={300}>
+            <Box sx={{ width: "100%" }}>
               <Alert
                 severity="error"
                 sx={{
@@ -158,11 +155,10 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSuccess, onLogin }) => {
               >
                 {error}
               </Alert>
-            )}
-          </Box>
-        </Fade>
-      </Box>
-
+            </Box>
+          </Fade>
+        </Box>
+      )}
       <Box
         component="form"
         onSubmit={handleSubmit(handleFormSubmit)}
