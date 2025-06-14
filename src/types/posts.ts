@@ -29,13 +29,21 @@ export interface deletePostDTO {
 }
 
 export interface getPostsResponse {
-  posts: Post[];
-  total_count: number;
-  page: number;
-  page_size: number;
-  total_pages: number;
+  success: boolean;
+  message: string;
+  data: {
+    posts: Post[];
+    total_count: number;
+    page: number;
+    page_size: number;
+    total_pages: number;
+  };
 }
 
 export interface getPostResponse {
-  post: Post;
+  success: boolean;
+  message: string;
+  data: {
+    post: Post;
+  };
 }
