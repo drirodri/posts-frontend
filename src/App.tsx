@@ -4,7 +4,10 @@ import { theme } from "./theme";
 import { AuthProvider } from "./hooks/auth";
 import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
+import DashboardPage from "./pages/DashboardPage";
+import PostsPage from "./pages/posts/PostsPage";
 import { ProtectedRoute } from "./components/auth";
+import { MainLayout } from "./components/layout";
 
 function App() {
   return (
@@ -28,16 +31,38 @@ function App() {
                 <a href="/login">Voltar para o login</a>
               </div>
             }
-          />
+          />{" "}
           {/* Rotas protegidas */}
           <Route
             path="/dashboard"
             element={
               <ProtectedRoute>
-                <div style={{ padding: "20px", textAlign: "center" }}>
-                  <h1>Dashboard (Em desenvolvimento)</h1>
-                  <p>Bem-vindo! Esta página será implementada em breve.</p>
-                </div>
+                <MainLayout>
+                  <DashboardPage />
+                </MainLayout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/posts"
+            element={
+              <ProtectedRoute>
+                <MainLayout>
+                  <PostsPage />
+                </MainLayout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/posts/create"
+            element={
+              <ProtectedRoute>
+                <MainLayout>
+                  <div style={{ padding: "20px", textAlign: "center" }}>
+                    <h1>Criar Post (Em desenvolvimento)</h1>
+                    <p>Página para criar posts será implementada em breve.</p>
+                  </div>
+                </MainLayout>
               </ProtectedRoute>
             }
           />
