@@ -18,10 +18,10 @@ import {
   Dashboard,
   Article,
   Create,
-  Favorite,
-  Analytics,
-  Settings,
   Person,
+  Search,
+  Notifications,
+  Settings,
   Logout,
 } from "@mui/icons-material";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -42,14 +42,19 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    text: "Dashboard",
+    text: "Início",
     icon: <Dashboard />,
     path: "/dashboard",
   },
   {
-    text: "Meus Posts",
-    icon: <Article />,
-    path: "/posts",
+    text: "Explorar",
+    icon: <Search />,
+    path: "/explore",
+  },
+  {
+    text: "Notificações",
+    icon: <Notifications />,
+    path: "/notifications",
   },
   {
     text: "Criar Post",
@@ -57,14 +62,9 @@ const navItems: NavItem[] = [
     path: "/posts/create",
   },
   {
-    text: "Favoritos",
-    icon: <Favorite />,
-    path: "/posts/favorites",
-  },
-  {
-    text: "Estatísticas",
-    icon: <Analytics />,
-    path: "/analytics",
+    text: "Meus Posts",
+    icon: <Article />,
+    path: "/posts",
     divider: true,
   },
   {
