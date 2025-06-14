@@ -4,7 +4,7 @@ import { theme } from "./theme";
 import { AuthProvider } from "./hooks/auth";
 import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
-import ProtectedRoute from "./components/auth/ProtectedRoute";
+import { ProtectedRoute } from "./components/auth";
 
 function App() {
   return (
